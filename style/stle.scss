@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: #0a0c1c;
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    background: #1b1937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 95px;
+    width: 100%;
+    max-width: 1110px;
+    // height: 446px;
+    border-radius: 8px;
+    .photo {
+      display: none;
+    }
+    .section-info {
+      padding-left: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0 auto;
+      h1 {
+        width: 100%;
+        max-width: 403px;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 122%;
+        color: #fff;
+        padding-bottom: 25px;
+        span {
+          color: #ab5cdb;
+        }
+      }
+      .info {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 167%;
+        color: #fff;
+        opacity: 0.75;
+        width: 100%;
+        max-width: 403px;
+        padding-bottom: 72px;
+      }
+      .folower {
+        width: 100%;
+        max-width: 374px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        div {
+          h3 {
+            font-weight: 700;
+            font-size: 24px;
+            color: #fff;
+          }
+          p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 208%;
+            letter-spacing: 0.08em;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .section-foto {
+      width: 100%;
+      max-width: 540px;
+      height: 446px;
+    }
+  }
+}
+@media screen and (max-width: 950px) {
+  .wrapper {
+    height: 900px;
+    .container {
+      display: grid;
+      justify-content: center;
+      width: 327px;
+      gap: 0;
+      .photo {
+        display: block;
+      }
+      .section-info {
+        padding: 40px 30px;
+        gap: 24px;
+        text-align: center;
+        .folower {
+          display: flex;
+          text-align: center;
+          flex-direction: column;
+          gap: 24px;
+        }
+        h1 {
+          font-size: 28px;
+          line-height: 32px;
+          padding: 0;
+        }
+        .info {
+          font-size: 15px;
+          line-height: 25px;
+          padding-bottom: 40px;
+        }
+      }
+      .section-foto {
+        display: none;
+      }
+    }
+  }
+}
