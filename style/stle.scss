@@ -1,69 +1,64 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: "Inter", sans-serif;
-  background: #0a0c1c;
+  font-family: sans-serif;
 }
+
 .wrapper {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  background: #0a0c1c;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
   .container {
-    background: #1b1937;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 95px;
     width: 100%;
     max-width: 1110px;
-    // height: 446px;
     border-radius: 8px;
-    .photo {
-      display: none;
-    }
-    .section-info {
-      padding-left: 24px;
+    background: #1b1937;
+    display: flex;
+    .information {
+      padding: 71px 95px 59px 72px;
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;
-      margin: 0 auto;
-      h1 {
-        width: 100%;
-        max-width: 403px;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 122%;
-        color: #fff;
-        padding-bottom: 25px;
-        span {
-          color: #ab5cdb;
+      gap: 72px;
+      .about {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        max-width: 570px;
+        h1 {
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 122%;
+          color: #fff;
+          span {
+            color: #ab5cdb;
+          }
+        }
+        p {
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 167%;
+          color: #fff;
+          opacity: 0.75;
         }
       }
-      .info {
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 167%;
-        color: #fff;
-        opacity: 0.75;
+      .falowers {
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        row-gap: 24px;
         width: 100%;
-        max-width: 403px;
-        padding-bottom: 72px;
-      }
-      .folower {
-        width: 100%;
-        max-width: 374px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
         div {
-          h3 {
+          h2 {
             font-weight: 700;
             font-size: 24px;
             color: #fff;
@@ -73,52 +68,55 @@ body {
             font-size: 12px;
             line-height: 208%;
             letter-spacing: 0.08em;
+            text-transform: uppercase;
             color: #fff;
+            opacity: 0.6;
           }
         }
       }
     }
-    .section-foto {
+    img {
       width: 100%;
       max-width: 540px;
-      height: 446px;
+      min-width: 400px;
+      min-height: 426px;
+      border-radius: 0 8px 8px 0;
     }
   }
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 850px) {
   .wrapper {
-    height: 900px;
+    padding: 88px 24px;
+    height: 100%;
     .container {
-      display: grid;
-      justify-content: center;
-      width: 327px;
-      gap: 0;
-      .photo {
-        display: block;
-      }
-      .section-info {
-        padding: 40px 30px;
-        gap: 24px;
-        text-align: center;
-        .folower {
-          display: flex;
+      flex-direction: column-reverse;
+      .information {
+        padding: 40px 32px 32px 31px;
+        .about {
+          max-width: 850px;
+          gap: 16px;
           text-align: center;
-          flex-direction: column;
-          gap: 24px;
+          align-items: center;
+          h1 {
+            font-size: 28px;
+            line-height: 114%;
+          }
         }
-        h1 {
-          font-size: 28px;
-          line-height: 32px;
-          padding: 0;
-        }
-        .info {
-          font-size: 15px;
-          line-height: 25px;
-          padding-bottom: 40px;
+        .falowers {
+          justify-content: center;
+          div {
+            max-width: 264px;
+            min-width: 200px;
+            height: 56px;
+          }
         }
       }
-      .section-foto {
-        display: none;
+      img {
+        width: 100%;
+        max-width: 860px;
+        min-width: 327px;
+        border-radius: 8px 8px 0 0;
+        min-height: 240px;
       }
     }
   }

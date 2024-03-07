@@ -7,13 +7,13 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  background: #0a0c1c;
+  font-family: sans-serif;
 }
 
 .wrapper {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  background: #0a0c1c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,138 +23,134 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 20px;
 }
 .wrapper .container {
+  width: 100%;
+  max-width: 1110px;
+  border-radius: 8px;
   background: #1b1937;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 95px;
-  width: 100%;
-  max-width: 1110px;
-  border-radius: 8px;
 }
-.wrapper .container .photo {
-  display: none;
-}
-.wrapper .container .section-info {
-  padding-left: 24px;
+.wrapper .container .information {
+  padding: 71px 95px 59px 72px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 auto;
+  gap: 72px;
 }
-.wrapper .container .section-info h1 {
-  width: 100%;
-  max-width: 403px;
+.wrapper .container .information .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+  max-width: 570px;
+}
+.wrapper .container .information .about h1 {
   font-weight: 700;
   font-size: 36px;
   line-height: 122%;
   color: #fff;
-  padding-bottom: 25px;
 }
-.wrapper .container .section-info h1 span {
+.wrapper .container .information .about h1 span {
   color: #ab5cdb;
 }
-.wrapper .container .section-info .info {
+.wrapper .container .information .about p {
   font-weight: 400;
   font-size: 15px;
   line-height: 167%;
   color: #fff;
   opacity: 0.75;
-  width: 100%;
-  max-width: 403px;
-  padding-bottom: 72px;
 }
-.wrapper .container .section-info .folower {
+.wrapper .container .information .falowers {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 24px;
   width: 100%;
-  max-width: 374px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
-.wrapper .container .section-info .folower div h3 {
+.wrapper .container .information .falowers div h2 {
   font-weight: 700;
   font-size: 24px;
   color: #fff;
 }
-.wrapper .container .section-info .folower div p {
+.wrapper .container .information .falowers div p {
   font-weight: 400;
   font-size: 12px;
   line-height: 208%;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: #fff;
+  opacity: 0.6;
 }
-.wrapper .container .section-foto {
+.wrapper .container img {
   width: 100%;
   max-width: 540px;
-  height: 446px;
+  min-width: 400px;
+  min-height: 426px;
+  border-radius: 0 8px 8px 0;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 850px) {
   .wrapper {
-    height: 900px;
+    padding: 88px 24px;
+    height: 100%;
   }
   .wrapper .container {
-    display: grid;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .wrapper .container .information {
+    padding: 40px 32px 32px 31px;
+  }
+  .wrapper .container .information .about {
+    max-width: 850px;
+    gap: 16px;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrapper .container .information .about h1 {
+    font-size: 28px;
+    line-height: 114%;
+  }
+  .wrapper .container .information .falowers {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 327px;
-    gap: 0;
   }
-  .wrapper .container .photo {
-    display: block;
+  .wrapper .container .information .falowers div {
+    max-width: 264px;
+    min-width: 200px;
+    height: 56px;
   }
-  .wrapper .container .section-info {
-    padding: 40px 30px;
-    gap: 24px;
-    text-align: center;
-  }
-  .wrapper .container .section-info .folower {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    text-align: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 24px;
-  }
-  .wrapper .container .section-info h1 {
-    font-size: 28px;
-    line-height: 32px;
-    padding: 0;
-  }
-  .wrapper .container .section-info .info {
-    font-size: 15px;
-    line-height: 25px;
-    padding-bottom: 40px;
-  }
-  .wrapper .container .section-foto {
-    display: none;
+  .wrapper .container img {
+    width: 100%;
+    max-width: 860px;
+    min-width: 327px;
+    border-radius: 8px 8px 0 0;
+    min-height: 240px;
   }
 }
